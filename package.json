@@ -1,10 +1,14 @@
 {
 	"name": "create-aliases",
+	"author": "aarondiel",
+	"license": "MIT",
+	"homepage": "https://github.com/aarondiel/create-aliases#readme",
 	"version": "1.0.0",
 	"description": "creates path-aliases by parsing your tsconfig",
-	"main": "create_aliases.ts",
+	"main": "dest/create_aliases.js",
+	"types": "dest",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"build": "tsc"
 	},
 
 	"repository": {
@@ -20,17 +24,14 @@
 		"generator"
 	],
 
-	"author": "aarondiel",
-	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/aarondiel/create-aliases/issues"
 	},
 
-	"homepage": "https://github.com/aarondiel/create-aliases#readme",
-
 	"devDependencies": {
 		"@types/node": "^18.0.6",
 		"sass": "^1.53.0",
+		"typescript": "^4.7.4",
 		"vite": "^3.0.2"
 	}
 }
