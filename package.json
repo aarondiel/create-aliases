@@ -6,10 +6,12 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
+
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/aarondiel/create-aliases.git"
 	},
+
 	"keywords": [
 		"typescript",
 		"path",
@@ -17,13 +19,17 @@
 		"config",
 		"generator"
 	],
+
 	"author": "aarondiel",
 	"license": "MIT",
 	"bugs": {
 		"url": "https://github.com/aarondiel/create-aliases/issues"
 	},
+
 	"homepage": "https://github.com/aarondiel/create-aliases#readme",
-	"dependencies": {
+
+	"devDependencies": {
+		"@types/node": "^18.0.6",
 		"sass": "^1.53.0",
 		"vite": "^3.0.2"
 	}
