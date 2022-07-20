@@ -75,12 +75,12 @@ export function scss_aliases(
 		const base_directory = split_url.shift()
 
 		if (base_directory == undefined)
-		return null
+			return null
 
 		const alias = aliases[base_directory]
 
 		if (alias === undefined)
-		return null
+			return null
 
 		const file_path = resolve(
 			directory_root,
