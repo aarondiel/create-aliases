@@ -3,11 +3,13 @@
 	"author": "aarondiel",
 	"license": "MIT",
 	"homepage": "https://github.com/aarondiel/create-aliases#readme",
-	"version": "1.0.2",
+	"version": "1.0.3",
+	"type": "module",
 	"description": "creates path-aliases by parsing your tsconfig",
 	"main": "dist/create_aliases.js",
 	"module": "dist/create_aliases.js",
 	"types": "dist/create_aliases.d.ts",
+	"files": [ "dist" ],
 	"scripts": {
 		"build": "rm -r dist && tsc"
 	},
