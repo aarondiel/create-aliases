@@ -58,4 +58,4 @@ export function vite_aliases(aliases, directory_root) {
     }
     return result;
 }
-//# sourceMappingURL=create_path_aliases.js.map
+//# sourceMappingURL=create_aliases.js.map

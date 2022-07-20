@@ -8,7 +8,7 @@
 	"main": "dest/create_aliases.js",
 	"types": "dest",
 	"scripts": {
-		"build": "tsc"
+		"build": "rm -r dest && tsc"
 	},
 
 	"repository": {
