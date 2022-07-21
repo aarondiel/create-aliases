@@ -34,7 +34,7 @@ export function parse_tsconfig(path) {
 }
 export function scss_aliases(aliases, directory_root) {
     directory_root ??= ".";
-    function scss_find_file(url) {
+    const scss_find_file = (url) => {
         const split_url = url.split("/");
         const base_directory = split_url.shift();
         if (base_directory == undefined)
@@ -43,11 +43,9 @@ export function scss_aliases(aliases, directory_root) {
         if (alias === undefined)
             return null;
         const file_path = resolve(directory_root, alias, ...split_url);
-        return new URL(file_path);
-    }
-    return {
-        findFileUrl: scss_find_file
+        return { file: file_path };
     };
+    return scss_find_file;
 }
 export function vite_aliases(aliases, directory_root) {
     const result = {};
