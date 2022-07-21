@@ -1,5 +1,5 @@
 import type { AliasOptions } from "vite"
-import type { FileImporter } from "sass"
+import type { LegacySyncImporter } from "sass"
 import { readFileSync as read_file } from "fs"
 import { resolve, join } from "path";
 
@@ -67,10 +67,10 @@ export function parse_tsconfig(
 export function scss_aliases(
 	aliases: Record<string, string>,
 	directory_root: string
-): FileImporter<"sync"> {
+): LegacySyncImporter {
 	directory_root ??= "."
 
-	function scss_find_file(url: string): URL | null {
+	const scss_find_file: LegacySyncImporter = (url) => {
 		const split_url: string[] = url.split("/")
 		const base_directory = split_url.shift()
 
@@ -88,12 +88,10 @@ export function scss_aliases(
 			...split_url
 		)
 
-		return new URL(file_path)
+		return { file: file_path }
 	}
 
-	return {
-		findFileUrl: scss_find_file
-	}
+	return scss_find_file
 }
 
 export function vite_aliases(
